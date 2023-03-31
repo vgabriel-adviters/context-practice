@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import React, { useState, useContext } from "react";
+import { PruebaContext } from "./contexts/PruebaContext";
 import './App.css';
+import Inferior from './components/Inferior';
+import Medio from './components/Medio';
+import Superior from './components/Superior';
 
 function App() {
+  const [contenido, setContenido] = useState(useContext(PruebaContext));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <PruebaContext.Provider value={{ contenido, setContenido }}>
+        <Superior />
+        <Medio />
+      </PruebaContext.Provider>
+      <Inferior />
+    </>
   );
 }
 
