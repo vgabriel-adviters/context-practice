@@ -4,14 +4,15 @@ import "./styles.css";
 
 const Medio = () => {
 
-    const {contenido} = useContext(PruebaContext);
+    // Se obtiene SOLO un valor definido en 'value' en el Provider
+    const { contenido } = useContext(PruebaContext);
 
     useEffect(() => {
-        console.log("MEDIO: Primer renderizado");
+        console.log("MEDIO: PRIMER renderizado");
     }, []);
 
     useEffect(() => {
-        console.log("MEDIO: renderizado");
+        console.log("MEDIO: renderizado NUEVAMENTE");
     });
 
     return (

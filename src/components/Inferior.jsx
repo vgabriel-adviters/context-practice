@@ -4,14 +4,15 @@ import "./styles.css";
 
 const Inferior = () => {
 
+    // Se obtiene el VALOR POR DEFECTO del contexto
     const valorContexto = useContext(PruebaContext);
 
     useEffect(() => {
-        console.log("INFERIOR: Primer renderizado");
+        console.log("INFERIOR: PRIMER renderizado");
     }, []);
 
     useEffect(() => {
-        console.log("INFERIOR: renderizado");
+        console.log("INFERIOR: renderizado NUEVAMENTE");
     });
 
     return (
